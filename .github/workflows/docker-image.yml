@@ -11,6 +11,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-20.04]  # You can adjust the Ubuntu version if needed
+        arch: [arm64]
 
     steps:
     - uses: actions/checkout@v3
